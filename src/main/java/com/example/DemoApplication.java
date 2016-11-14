@@ -6,8 +6,11 @@ import com.sun.webkit.WebPage;
 import com.teamdev.jxbrowser.chromium.Browser;
 import com.teamdev.jxbrowser.chromium.javafx.BrowserView;
 import com.vaadin.annotations.Theme;
+import com.vaadin.server.BrowserWindowOpener;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.server.WebBrowser;
 import com.vaadin.spring.annotation.SpringUI;
+import com.vaadin.ui.BrowserFrame;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import javafx.application.Application;
@@ -36,11 +39,14 @@ public class DemoApplication extends Application {
 	public static SpringApplication context;
 	public static void main(String[] args) {
 
-//		SpringApplication.run(MyUI.class, args);
+		SpringApplication.run(MyUI.class, args);
 		Application.launch(args);
+
 	}
 	@Override
 	public void start(Stage stage) throws Exception{
+
+
 
 		StackPane root = new StackPane();
 

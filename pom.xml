@@ -113,11 +113,11 @@
 			<!--<artifactId>jxbrowser-cross-platform</artifactId>-->
 			<!--<version>6.0</version>-->
 		<!--</dependency>-->
-		<dependency>
-			<groupId>com.teamdev.jxbrowser</groupId>
-			<artifactId>jxbrowser-linux64</artifactId>
-			<version>6.0</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.teamdev.jxbrowser</groupId>-->
+			<!--<artifactId>jxbrowser-linux64</artifactId>-->
+			<!--<version>6.0</version>-->
+		<!--</dependency>-->
 	</dependencies>
 
 
@@ -126,10 +126,10 @@
 			<id>vaadin-addons</id>
 			<url>http://maven.vaadin.com/vaadin-addons</url>
 		</repository>
-		<repository>
-			<id>com.teamdev</id>
-			<url>http://maven.teamdev.com/repository/products</url>
-		</repository>
+		<!--<repository>-->
+			<!--<id>com.teamdev</id>-->
+			<!--<url>http://maven.teamdev.com/repository/products</url>-->
+		<!--</repository>-->
 
 
 		<repository>

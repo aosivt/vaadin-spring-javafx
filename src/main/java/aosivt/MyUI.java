@@ -9,14 +9,12 @@ import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
+import com.vaadin.server.BrowserWindowOpener;
 import com.vaadin.server.Page;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.spring.annotation.SpringUI;
-import com.vaadin.ui.Notification;
-import com.vaadin.ui.TextArea;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -52,7 +50,6 @@ public class MyUI extends UI {
         com.vaadin.ui.JavaScript.getCurrent().execute("test_con();");
 
         setContent(layout);
-
 
     }
 
