@@ -1,5 +1,6 @@
 package com.example;
 
+import aosivt.MyUI;
 import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
@@ -29,12 +30,13 @@ public class DemoApplication extends Application {
 	public static SpringApplication context;
 	public static void main(String[] args) {
 
+		SpringApplication.run(MyUI.class, args);
 		Application.launch(args);
 	}
 	@Override
 	public void start(Stage stage) throws Exception{
 
-		SpringApplication.run(DemoApplication.class, "");
+
 
 		StackPane root = new StackPane();
 
@@ -101,9 +103,9 @@ public class DemoApplication extends Application {
 
 
 
-		@Override
-		public boolean isClosing() {
-			return super.isClosing();
-		}
+//		@Override
+//		public boolean isClosing() {
+//			return super.isClosing();
+//		}
 	}
 }
