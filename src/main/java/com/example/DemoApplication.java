@@ -1,6 +1,10 @@
 package com.example;
 
 import aosivt.MyUI;
+import com.sun.javafx.sg.prism.web.NGWebView;
+import com.sun.webkit.WebPage;
+import com.teamdev.jxbrowser.chromium.Browser;
+import com.teamdev.jxbrowser.chromium.javafx.BrowserView;
 import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
@@ -21,6 +25,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
+
+
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
@@ -30,27 +36,31 @@ public class DemoApplication extends Application {
 	public static SpringApplication context;
 	public static void main(String[] args) {
 
-		SpringApplication.run(MyUI.class, args);
+//		SpringApplication.run(MyUI.class, args);
 		Application.launch(args);
 	}
 	@Override
 	public void start(Stage stage) throws Exception{
 
-
-
 		StackPane root = new StackPane();
 
+//		Browser browser = new Browser();
+//		BrowserView browserView = new BrowserView(browser);
+//
 		WebView view = new WebView();
 		WebEngine engine = view.getEngine();
 		engine.load("http://localhost:8080");
 		root.getChildren().add(view);
-
-		stage.setOnCloseRequest(ev -> {
-			stage.close();
-		});
+//		root.getChildren().addAll(browserView);
+//
+//		stage.setOnCloseRequest(ev -> {
+//			stage.close();
+//		});
 		Scene scene = new Scene(root, 800, 600);
 		stage.setScene(scene);
 		stage.show();
+//		browser.loadURL("http://google.ru");
+//		browser.loadURL("http://localhost:8080");
 
 	}
 	@Override

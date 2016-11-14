@@ -32,7 +32,7 @@ import javax.servlet.annotation.WebServlet;
  * The UI is initialized using {@link #init(VaadinRequest)}. This method is intended to be 
  * overridden to add component to the user interface and initialize non-component functionality.
  */
-@Theme("valo")
+@Theme("mytheme")
 @JavaScript({
         "vaadin://jquery-3.1.1.js",
 
